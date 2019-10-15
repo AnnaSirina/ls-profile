@@ -87,3 +87,98 @@ html(lang="en")
 
       section.works 
         h2.section-title Мои работы
+        .works__left 
+          .slider
+            img().slider__background
+            .slider__preview
+              ul.previews
+                - for (var i=0; i<3; i++)
+                  li.previes__item
+                    img.previes__img
+            .slider__buttons
+              .slider-btn
+                button.slider-btn__item.slider-btn__item--next
+                button.slider-btn__item.slider-btn__item--prev
+        .works__right
+          .works__tags
+            - var tags = ['html', 'css', 'javascript']
+            each tag in tags
+                ul.tags 
+                  li.tags__item #{tag}
+            .works__desc
+              h3.works__title Сайт школы образования
+              .works__text 
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam explicabo perspiciatis ipsa rem vero, recusandae ut cum obcaecati sint quas excepturi dolores nesciunt possimus tempore quo soluta autem! Cupiditate, tempora?
+              a.icone-link
+                .icone-link__icon
+                .icone-link__text
+
+      section.rewier
+        .container
+          h2.section-title.rewier--section-title Что обо мне говорят
+          .rewier__btns
+            button.rewier__next
+            button.rewier__next
+          .rewier__text
+            .rewier__desc
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, asperiores? Vitae delectus, mollitia temporibus ut repellat architecto. Nostrum dignissimos a temporibus necessitatibus, ea doloremque, dolore sit doloribus nam ipsam obcaecati.
+            .rewier__speaker
+              .rewier__speaker-about
+                .rewier__avatar
+                  
+                    ul.rewier__description
+                      - 
+                        var items = [
+                          ['Ковальчук Дмитрий', 'Основатель Loftschool'],
+                          ['Владимир Сабанцев', 'Преподаватель']
+                        ]
+                      each item in items
+                        li.rewier__desc-item
+                          .rewier__name #{item[0]}
+                          .rewier__who #{item[1]}
+
+      section.contact
+        .container
+          h2.section-title.contact--section-title Связаться со мной
+          form.contact__form   
+            .contact__row1 
+              .contact__input-border
+                input.contact__input 
+              .contact__input-border
+                input.contact__input 
+            .contact__row2
+              .contact__input-border
+                textarea.contact__textarea
+          .contact__btn
+            button.contact__button
+
+      footer.footer
+        .container
+          .footer__column1
+            .footer__year 2019
+            h3.section-title Анна Сирина
+            .footer__about Личный сайт веб разработчика
+
+          .footer__column2
+            .first__menu
+                nav.nav
+                  - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
+                  ul.nav__list
+                    each item in menu
+                      li.nav__item
+                        a(href="").nav__link #{item}
+            .footer__desc 
+              .footer__desc-col1
+                .footer__text 
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ullam nisi quisquam exercitationem! Libero at, cupiditate id molestiae et doloribus suscipit optio nostrum distinctio, neque magnam consectetur tempora adipisci? Maiores.
+                .first__links
+                  - var icons = ['insta', 'vk', 'github']
+                  ul.socials
+                    each item in icons
+                      li.socials__item
+                        a(href="").social__link
+                        +icon(`${item}`, 'socials__icons')
+                .footer__desc-col2
+                  .footer__text 
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia eaque optio esse velit voluptates voluptate quisquam maxime praesentium. Veritatis facere sapiente dolorum accusamus quo provident minus nemo, quia perferendis deleniti.
+                  .footer__auther Martin Golding
