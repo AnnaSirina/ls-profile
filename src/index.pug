@@ -30,11 +30,13 @@ html(lang="en")
                       a(href="").social__link
                       +icon(`${item}`, 'socials__icons')
             .first__content
-              .user
-                h1.user__desc Личный сайт веб разработчика 
-                .user__name Анна Сирина
+              .first__about
+                h1.first__user-about Личный сайт веб разработчика 
+                h2.first__user-name Анна Сирина
             .first__scroll
-              .scroll-downbtn Скролл 
+              a.scroll__link
+                .scroll-downbtn Скролл 
+                +icon("scroll", 'scroll__icon')
         
         section.aboutme
           .container.aboutme__container
@@ -57,34 +59,34 @@ html(lang="en")
             .aboutme__right
               h4.aboutme__title Привет, меня зовут
               h2.aboutme__name Анна Сирина
-              .aboutme__text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit maiores nulla, mollitia debitis aperiam officiis eaque consequatur velit ea nostrum reprehenderit, ipsum dolorum vero amet repellendus iure! Quis, quaerat dolore?
-              .aboutme__ps Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet incidunt, consequuntur mollitia a obcaecati ratione optio. Non sit sunt sequi nam dicta, sapiente vitae obcaecati hic amet pariatur aliquid voluptatem?
+              .aboutme__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              .aboutme__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
       section.profite
-        .container 
+        +image("content/hands.png", "profite__pic")
+        .container.profite__container
           .profite__title
-            h2.section-title Чем я могу быть Вам полезен
+            h2.section-title.profite__section-title Чем я могу быть Вам полезен
             .profite__desc 
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt at sunt similique totam. Ipsam minus quis quisquam ipsa, doloribus inventore laboriosam labore voluptate optio itaque odio rerum quod perspiciatis. 
-        ul.skills 
-          -
-            var skills = [
-              ['Front-end', ['HTML5', 'CSS', 'JavaScript','Jquery и Vue.js']],
-              ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']]
-            ] 
-          each item in skills
-            li.skills__item.skills-row
-              h3.skills-row__title #{item[0]}
-              ul.skills-row__list
-                each skill in item[1]
-                  li.skill-row__item
-                    .skill-value
-                      svg(vieBox="0 0 200 200" preserveAspectRatio="none").skill__round
-                        circle(r="80", cx="100", cy="100").skill__circle--position-uppon
-                        circle(r="80", cx="100", cy="100").skill__circle--position-under
-                        linear-gradient()
-                      .skill__title #{skill}
-
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
+          ul.skills 
+            -
+              var skills = [
+                ['Front-end', ['HTML5', 'CSS', 'JavaScript','Jquery и Vue.js']],
+                ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']]
+              ] 
+            each item in skills
+              li.skills__item.skills-row
+                h3.skills-row__title #{item[0]}
+                ul.skills-row__list
+                  each skill in item[1]
+                    li.skills-row__item
+                      .skills-value
+                        svg(vieBox="0 0 140 140" preserveAspectRatio="none").skill__round
+                          circle(r="35", cx="70", cy="70").skill__circle--position-uppon
+                          circle(r="35", cx="70", cy="70").skill__circle--position-under
+                          linear-gradient()
+                        
       section.works 
         h2.section-title Мои работы
         .works__left 
