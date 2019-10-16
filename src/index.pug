@@ -60,7 +60,7 @@ html(lang="en")
               h4.aboutme__title Привет, меня зовут
               h2.aboutme__name Анна Сирина
               .aboutme__text Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              .aboutme__ps Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+              .aboutme__ps Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
 
       section.profite
         +image("content/hands.png", "profite__pic")
@@ -68,7 +68,7 @@ html(lang="en")
           .profite__title
             h2.section-title.profite__section-title Чем я могу быть Вам полезен
             .profite__desc 
-              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
+              p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
           ul.skills 
             -
               var skills = [
@@ -88,32 +88,35 @@ html(lang="en")
                           linear-gradient()
                         
       section.works 
-        h2.section-title Мои работы
-        .works__left 
-          .slider
-            img().slider__background
-            .slider__preview
-              ul.previews
-                - for (var i=0; i<3; i++)
-                  li.previes__item
-                    img.previes__img
-            .slider__buttons
-              .slider-btn
-                button.slider-btn__item.slider-btn__item--next
-                button.slider-btn__item.slider-btn__item--prev
-        .works__right
-          .works__tags
-            - var tags = ['html', 'css', 'javascript']
-            each tag in tags
-                ul.tags 
-                  li.tags__item #{tag}
-            .works__desc
-              h3.works__title Сайт школы образования
-              .works__text 
-                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam explicabo perspiciatis ipsa rem vero, recusandae ut cum obcaecati sint quas excepturi dolores nesciunt possimus tempore quo soluta autem! Cupiditate, tempora?
-              a.icone-link
-                .icone-link__icon
-                .icone-link__text
+        .container.works__container
+          h2.section-title.works__section-title Мои работы
+          .works__slider
+            .works__left 
+              .slider
+                +image("content/slider.png", "slider__pic")
+                .slider__preview
+                  ul.previews
+                    - for (var i=0; i<3; i++)
+                      li.previes__item
+                        img.previes__img
+                .slider__buttons
+                  .slider-btn
+                    button.slider-btn__item.slider-btn__item--next
+                    button.slider-btn__item.slider-btn__item--prev
+            .works__right
+              .works__tags
+                ul.tags  
+                  - var tags = ['HTML', 'CSS', 'JavaScript']  
+                  each tag in tags          
+                    li.tags__item #{tag}
+                .works__desc
+                  h3.works__title Сайт школы образования
+                  .works__text 
+                    p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.icone-link
+                    .icone-link__icon
+                    +icon("link", 'icon-link__icon')
+                    a(href="http://loftschool.ru").icone-link__text Посмотреть сайт
 
       section.rewier
         .container
