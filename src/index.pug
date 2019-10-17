@@ -66,7 +66,7 @@ html(lang="en")
         +image("content/hands.png", "profite__pic")
         .container.profite__container
           .profite__title
-            h2.section-title.profite__section-title Чем я могу быть Вам полезен
+            h2.section-title.profite__section-title Чем я могу быть Вам полезна
             .profite__desc 
               p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
           ul.skills 
@@ -117,55 +117,78 @@ html(lang="en")
                     .icone-link__icon
                     +icon("link", 'icon-link__icon')
                     a(href="http://loftschool.ru").icone-link__text Посмотреть сайт
+      
+      .rewier-form
+        +image("content/l1.png", "rewier-form__bkg1")
+        +image("content/l2.png", "rewier-form__bkg2")
+        +image("content/l3.png", "rewier-form__bkg3")
+        +image("content/l4.png", "rewier-form__bkg4")
+        
+        section.rewier
+          .container.rewier__container
+            .rewier__row1
+              h2.section-title.rewier--section-title Что обо мне говорят
+              .rewier__btns
+                button.rewier__prev
+                  +icon("arrow-down", 'arrow-prev')
+                button.rewier__next
+                  +icon("arrow-down", 'arrow-next')
+            .rewier__row2
+              - var rewier = ['Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей.', 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на очень старых браузерах.']
+                  ul.rewier__list-text
+                    each item in rewier
+                      li.rewier__item-text
+                        p #{item}
+                    .rewier__description
+                      - var icons = ['insta', 'vk']
+                      ul.rewier__list
+                        each item in icons
+                          li.rewier__item
+                            .rewier__avatar
+                              +icon(`${item}`, 'socials__icons')
+                            .rewier__qoute
+                              ul.rewier__description
+                                -
+                                  var items = [
+                                    ['Ковальчук Дмитрий', 'Основатель Loftschool'],
+                                    ['Владимир Сабанцев', 'Преподаватель']
+                                  ]
+                                each item in items
+                                  li.rewier__desc-item
+                                    .rewier__name #{item[0]}
+                                    .rewier__who #{item[1]}
 
-      section.rewier
-        .container
-          h2.section-title.rewier--section-title Что обо мне говорят
-          .rewier__btns
-            button.rewier__next
-            button.rewier__next
-          .rewier__text
-            .rewier__desc
-              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, asperiores? Vitae delectus, mollitia temporibus ut repellat architecto. Nostrum dignissimos a temporibus necessitatibus, ea doloremque, dolore sit doloribus nam ipsam obcaecati.
-            .rewier__speaker
-              .rewier__speaker-about
-                .rewier__avatar
-                  
-                    ul.rewier__description
-                      - 
-                        var items = [
-                          ['Ковальчук Дмитрий', 'Основатель Loftschool'],
-                          ['Владимир Сабанцев', 'Преподаватель']
-                        ]
-                      each item in items
-                        li.rewier__desc-item
-                          .rewier__name #{item[0]}
-                          .rewier__who #{item[1]}
-
-      section.contact
-        .container
-          h2.section-title.contact--section-title Связаться со мной
-          form.contact__form   
-            .contact__row1 
-              .contact__input-border
-                input.contact__input 
-              .contact__input-border
-                input.contact__input 
-            .contact__row2
-              .contact__input-border
-                textarea.contact__textarea
-          .contact__btn
-            button.contact__button
+        section.contact
+          .container.contact__container
+            h2.section-title.contact--section-title Связаться со мной
+            form.contact__form   
+              .contact__row1 
+                .contact__input-border.contact__input-border-input1
+                  label(for='name').contact__label Введите Ваше имя
+                  input#name.contact__input(placeholder='Ковальчук Дмитрий')
+                  +icon("user", 'contact__icon') 
+                .contact__input-border
+                  label(for='mail').contact__label Введите Ваш email
+                  input#mail.contact__input(placeholder='loftschool@study.com')
+                  +icon("envelope", 'contact__icon') 
+              .contact__row2
+                .contact__input-border-text
+                  .contact__block-text
+                    label(for='text').contact__label Сообщение к письму
+                    textarea#text.contact__textarea(placeholder='Требуется ваша помощь в сосзаднии сайта. Интересуют сроки и цена.')
+                    +icon("message", 'contact__icon-text') 
+            .contact__btn
+              button.contact__button Отправить
 
       footer.footer
-        .container
+        .container.footer__container
           .footer__column1
             .footer__year 2019
-            h3.section-title Анна Сирина
+            h3.section-title.footer__section-title Анна Сирина
             .footer__about Личный сайт веб разработчика
 
           .footer__column2
-            .first__menu
+            .footer__menu
                 nav.nav
                   - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
                   ul.nav__list
@@ -175,15 +198,15 @@ html(lang="en")
             .footer__desc 
               .footer__desc-col1
                 .footer__text 
-                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ullam nisi quisquam exercitationem! Libero at, cupiditate id molestiae et doloribus suscipit optio nostrum distinctio, neque magnam consectetur tempora adipisci? Maiores.
-                .first__links
+                  p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool.
+                .footer__links
                   - var icons = ['insta', 'vk', 'github']
-                  ul.socials
+                  ul.socials.footer__socials
                     each item in icons
-                      li.socials__item
-                        a(href="").social__link
-                        +icon(`${item}`, 'socials__icons')
-                .footer__desc-col2
-                  .footer__text 
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia eaque optio esse velit voluptates voluptate quisquam maxime praesentium. Veritatis facere sapiente dolorum accusamus quo provident minus nemo, quia perferendis deleniti.
+                      li.socials__item.footer__social__item
+                        a(href="").social__link.footer__social__link
+                          +icon(`${item}`, 'socials__icons')
+              .footer__desc-col2
+                .footer__text 
+                  p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете.
                   .footer__auther Martin Golding
