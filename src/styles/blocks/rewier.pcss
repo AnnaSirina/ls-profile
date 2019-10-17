@@ -31,59 +31,72 @@
     border: 2px solid $fill-grey-hover;
   }
 }
-/*
+
 .rewier__row1 {
   display: flex;
   justify-content: space-between;
   max-width: 60%;
+  margin-bottom: 110px;
 }
 
-.rewier__text {
-  display: flex;
-  justify-content: space-between;
-  max-width: 90%;
-}
-
-.rewier__speaker {
-  display: flex;
-  justify-content: space-between;
-  max-width: 90%;
-}
-
-.rewier__speaker-about {
- 
-}
-
-.rewier__avatar {
-  display: block;
-  max-width: 80px;
-  max-height: 80px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.rewier__avatar:first-child {
-  background-image: url(../images/content/vladimir.jpg);
-  z-index: 5;
-}
-
+.rewier__list-text,
 .rewier__description {
   display: flex;
   justify-content: space-between;
 }
 
-.rewier__desc-item {
-  display: flex;
-  flex-wrap: wrap;
+.rewier__list-text {
+  margin-bottom: 60px;
 }
 
-.rewier__text, .rewier__speaker {
+.rewier__item-text {
+  color: $text-grey;
+  line-height: 1.5;
+  font-size: 18px;
+}
 
-} */
+.rewier__desc-item {
+  width: 50%;
+}
 
-.rewier__list-text,
-.rewier__list {
+.rewier__img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 60px;
+}
+
+.rewier__avatar {
+  display: block;
+  background-image: url(../images/content/dmitriy.jpg);
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.rewier__avatar:last-child {
+  background-image: url(../images/content/vladimir.jpg);
+}
+
+.rewier__desc-item {
   display: flex;
-  justify-content: flex-start;
+}
+
+.rewier__about {
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.rewier__name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.rewier__who {
+  color: $text-grey;
 }
