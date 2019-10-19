@@ -82,7 +82,7 @@ html(lang="en")
                   each skill in item[1]
                     li.skills-row__item 
                       .progress
-                        .progress-circle 
+                        .progress-circle
                           svg
                             circle.progress-circle__path(r='48', cy='80', cx='80', stroke-width="2")
                             circle.progress-circle__progress.progress-circle__progress--red(r='48', cy='80', cx='80', stroke-dasharray='200 1000', stroke-width="7")
@@ -134,28 +134,25 @@ html(lang="en")
                 button.rewier__next
                   +icon("arrow-down", 'arrow-next')
             .rewier__row2
-              - var rewier = ['Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей.', 'Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на очень старых браузерах.']
-                  ul.rewier__list-text
-                    each item in rewier
-                      li.rewier__item-text
-                        p #{item}
-                    
+              ul.rewier__desc
+                - 
+                  var items = [
+                    ['Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей.', 'Ковальчук Дмитрий', 'Основатель Loftschool', 'content/vladimir.jpg'],
+                    ['Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на очень старых браузерах.', 'Владимир Сабанцев', 'Преподаватель', 'content/vladimir.jpg'],
+                   
+                  ]
+                each item in items
+                  +icon('quote', 'quote-icon')
+                  li.rewier__desc-item
+                    .rewier__topic #{item[0]}
+                    .rewier__about
+                      .rewier__img
+                        .rewier__avatar   
+                      .rewier__person
+                        .rewier__name #{item[1]}
+                        .rewier__value #{item[2]}
                       
-                  .rewier__qoute
-                    ul.rewier__description
-                      -
-                        var items = [
-                          ['Ковальчук Дмитрий', 'Основатель Loftschool'],
-                          ['Владимир Сабанцев', 'Преподаватель']
-                        ]
-                      each item in items
-                        li.rewier__desc-item
-                          .rewier__img  
-                            .rewier__avatar
-                          .rewier__about
-                            .rewier__name #{item[0]}
-                            .rewier__who #{item[1]}
-
+                      
         section.contact
           .container.contact__container
             h2.section-title.contact--section-title Связаться со мной

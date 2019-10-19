@@ -1,5 +1,4 @@
 .aboutme {
-  //background: $bc-grey;
   height: 100vh;
   background-image: url(../images/content/about.png);
   background-position: center center no-repeat;
@@ -40,4 +39,16 @@
 
 .aboutme__ps {
   font-style: italic;
+  display: flex;
+
+  &:before {
+    display: block;
+    content: "\2732";
+    height: 100px;
+    width: 100px;
+    color: FireBrick;
+    margin-left: -90px;
+    padding-right: 50px;
+    font-size: 42px;
+  }
 }
