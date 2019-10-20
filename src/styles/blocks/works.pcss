@@ -12,11 +12,20 @@
   font-size: 36px;
   color: black;
   margin-bottom: 70px;
+  font-weight: bold;
+
+  @include tablets {
+    font-size: 30px;
+  }
 }
 
 .works__slider {
   display: flex;
   justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .works__left {
@@ -29,10 +38,27 @@
   color: black;
   margin-bottom: 55px;
   max-width: 60%;
+
+  @include tablets {
+    max-width: 95%;
+    margin-bottom: 35px;
+  }
 }
 
 .works__text {
   line-height: 1.5;
   color: $text-grey;
   margin-bottom: 80px;
+
+  @include tablets {
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+.works__right {
+  @include tablets {
+    text-align: center;
+  }
 }

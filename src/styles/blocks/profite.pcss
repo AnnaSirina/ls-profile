@@ -2,7 +2,6 @@
   background-image: url(../images/content/profite.jpg);
   background-position: center center no-repeat;
   background-size: cover;
-  height: 100vh;
   position: relative;
 }
 
@@ -10,6 +9,13 @@
   position: absolute;
   left: 0;
   bottom: -10%;
+
+  @include tablets {
+    position: absolute;
+    bottom: -15%;
+    left: 25%;
+    transform: rotate(270deg);
+  }
 }
 
 .profite__container {
@@ -23,6 +29,11 @@
 .profite__title {
   margin: 0 auto;
   max-width: 50%;
+
+  @include tablets {
+    max-width: 70%;
+    text-align: center;
+  }
 }
 
 .profite__section-title {
@@ -30,10 +41,19 @@
   font-weight: bold;
   margin-bottom: 45px;
   color: white;
+
+  @include tablets {
+    max-width: 55%;
+    margin: 0 auto 45px auto;
+  }
 }
 
 .profite__desc {
   color: $text-grey;
   line-height: 1.5;
   text-align: left;
+
+  @include tablets {
+    text-align: center;
+  }
 }

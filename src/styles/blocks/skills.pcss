@@ -13,10 +13,24 @@
 .skills {
   margin-left: 30%;
   margin-top: 130px;
+  @include tablets {
+    margin-left: 0;
+    margin-top: 60px;
+  }
 }
 
 .skills-row__title {
   color: white;
   font-size: 24px;
   font-weight: bold;
+  @include tablets {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.skills__item {
+  @include tablets {
+    margin-bottom: 60px;
+  }
 }

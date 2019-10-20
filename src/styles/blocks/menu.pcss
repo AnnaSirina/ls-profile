@@ -1,0 +1,46 @@
+#menu {
+  background: transparent;
+  border: transparent;
+  outline: none;
+  width: 27px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+  margin-right: 40px;
+  &:hover {
+    transform: scale(1.1);
+    transition: 1ms;
+  }
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.menu-span {
+  content: "";
+  height: 3px;
+  width: 27px;
+  display: block;
+  background: white;
+
+  &:before {
+    content: "";
+    height: 3px;
+    width: 27px;
+    display: block;
+    background: white;
+    bottom: 5px;
+    position: absolute;
+  }
+  &:after {
+    content: "";
+    height: 3px;
+    width: 27px;
+    display: block;
+    background: white;
+    position: absolute;
+    top: 5px;
+  }
+}

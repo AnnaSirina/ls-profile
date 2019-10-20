@@ -29,10 +29,16 @@ html(lang="en")
                     li.socials__item
                       a(href="").social__link
                       +icon(`${item}`, 'socials__icons')
+                button#menu
+                  span.menu-span
             .first__content
               .first__about
-                h1.first__user-about Личный сайт веб разработчика 
-                h2.first__user-name Анна Сирина
+                h1.first__user-about 
+                  span.first__site Личный сайт 
+                  span.first__span веб разработчика 
+                h2.first__user-name 
+                  span.first__name Анна 
+                  span.first__sirname Сирина
             .first__scroll
               a.scroll__link
                 .scroll-downbtn Скролл 
@@ -186,9 +192,9 @@ html(lang="en")
             .footer__menu
                 div.nav
                   - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
-                  ul.nav__list
+                  ul.nav__list.footer__nav-list
                     each item in menu
-                      li.nav__item
+                      li.nav__item.footer__nav-item
                         a(href="").nav__link #{item}
             .footer__desc 
               .footer__desc-col1

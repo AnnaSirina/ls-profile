@@ -3,28 +3,54 @@
   background-position: center center no-repeat;
   background-size: cover;
   position: relative;
+  z-index: -2;
 }
 
 .rewier-form__bkg1 {
   position: absolute;
   right: 0;
   top: -15%;
+
+  @include tablets {
+    right: -5%;
+    top: -5%;
+    width: 20%;
+  }
 }
 
 .rewier-form__bkg2 {
   position: absolute;
   right: 15%;
   top: 40%;
+
+  @include tablets {
+    right: 15%;
+    top: 29%;
+    z-index: -1;
+    width: 14%;
+  }
 }
 
 .rewier-form__bkg3 {
   position: absolute;
   right: 5%;
   top: 55%;
+
+  @include tablets {
+    right: -5%;
+    top: 57%;
+  }
 }
 
 .rewier-form__bkg4 {
   position: absolute;
   right: 5%;
   top: 75%;
+
+  @include tablets {
+    right: -5%;
+    top: 75%;
+    width: 33%;
+    z-index: -1;
+  }
 }

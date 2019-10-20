@@ -3,6 +3,11 @@
   justify-content: space-between;
   color: white;
   max-width: 60%;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .first__user-about {
@@ -12,10 +17,26 @@
   color: $text-grey;
   color: $text-grey;
   font-weight: 700;
+
+  @include tablets {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+    font-size: 16px;
+  }
 }
 
 .first__user-name {
   font-size: 72px;
   line-height: 1;
   text-align: left;
+
+  @include tablets {
+    font-size: 48px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+  }
 }
