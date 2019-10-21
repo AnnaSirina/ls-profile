@@ -2,11 +2,19 @@
   display: flex;
   align-items: center;
   margin: 0 auto 80px auto;
+
+  @include phones {
+    margin: 0 auto;
+  }
 }
 
 .user__desc {
   display: flex;
   flex-direction: column;
+
+  @include phones {
+    margin-bottom: 50px;
+  }
 }
 
 .user__desc-item {

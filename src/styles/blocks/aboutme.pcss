@@ -1,23 +1,40 @@
 .aboutme {
-  height: 100vh;
   background-image: url(../images/content/about.png);
   background-position: center center no-repeat;
   background-size: cover;
+
+  @include phones {
+    height: 90vh;
+  }
 }
 .aboutme__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include phones {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .aboutme__left {
   margin-right: 160px;
   min-width: 30%;
+
+  @include phones {
+    margin-right: 0;
+    min-width: 100%;
+  }
 }
 
 .aboutme__title {
   color: $text-grey;
   margin-bottom: 35px;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
 }
 
 .aboutme__name {
@@ -27,6 +44,10 @@
 
   @include tablets {
     font-size: 30px;
+  }
+
+  @include phones {
+    max-width: 50%;
   }
 }
 
@@ -39,6 +60,11 @@
   @include tablets {
     max-width: 95%;
     font-size: 16px;
+  }
+
+  @include phones {
+    max-width: 100%;
+    font-size: 14px;
   }
 }
 
@@ -59,5 +85,12 @@
     margin-left: -90px;
     padding-right: 50px;
     font-size: 42px;
+
+    @include phones {
+      margin-left: -35px;
+      padding-right: 10px;
+      height: 25px;
+      width: 28px;
+    }
   }
 }

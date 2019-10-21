@@ -8,6 +8,10 @@
 }
 .skills-row__list {
   display: flex;
+
+  @include phones {
+    flex-wrap: wrap;
+  }
 }
 
 .skills {
@@ -16,6 +20,9 @@
   @include tablets {
     margin-left: 0;
     margin-top: 60px;
+  }
+  @include phones {
+    margin-bottom: 150px;
   }
 }
 

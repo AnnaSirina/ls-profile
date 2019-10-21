@@ -3,6 +3,7 @@
   background-position: center center no-repeat;
   background-size: cover;
   position: relative;
+  height: 100%;
 }
 
 .profite__pic {
@@ -15,6 +16,11 @@
     bottom: -15%;
     left: 25%;
     transform: rotate(270deg);
+  }
+
+  @include phones {
+    width: 55%;
+    bottom: -7%;
   }
 }
 
@@ -34,6 +40,12 @@
     max-width: 70%;
     text-align: center;
   }
+
+  @include phones {
+    font-size: 24px;
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 .profite__section-title {
@@ -46,6 +58,10 @@
     max-width: 55%;
     margin: 0 auto 45px auto;
   }
+  @include phones {
+    margin: 0;
+    max-width: 70%;
+  }
 }
 
 .profite__desc {
@@ -55,5 +71,10 @@
 
   @include tablets {
     text-align: center;
+  }
+
+  @include phones {
+    font-size: 14px;
+    text-align: left;
   }
 }

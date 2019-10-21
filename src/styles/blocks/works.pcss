@@ -43,6 +43,13 @@
     max-width: 95%;
     margin-bottom: 35px;
   }
+  @include phones {
+    font-size: 24px;
+    text-align: left;
+    margin: 0;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
 }
 
 .works__text {
@@ -55,10 +62,23 @@
     margin: 0 auto;
     margin-bottom: 30px;
   }
+  @include phones {
+    max-width: 95%;
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 65px;
+  }
 }
 
 .works__right {
   @include tablets {
     text-align: center;
+  }
+}
+
+.works__links {
+  @include phones {
+    display: flex;
   }
 }
