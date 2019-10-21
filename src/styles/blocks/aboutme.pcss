@@ -1,0 +1,54 @@
+.aboutme {
+  height: 100vh;
+  background-image: url(../images/content/about.png);
+  background-position: center center no-repeat;
+  background-size: cover;
+}
+.aboutme__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutme__left {
+  margin-right: 160px;
+  min-width: 30%;
+}
+
+.aboutme__title {
+  color: $text-grey;
+  margin-bottom: 35px;
+}
+
+.aboutme__name {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 45px;
+}
+
+.aboutme__text,
+.aboutme__ps {
+  color: $text-grey;
+  line-height: 1.5;
+  max-width: 75%;
+}
+
+.aboutme__text {
+  margin-bottom: 40px;
+}
+
+.aboutme__ps {
+  font-style: italic;
+  display: flex;
+
+  &:before {
+    display: block;
+    content: "\2732";
+    height: 100px;
+    width: 100px;
+    color: FireBrick;
+    margin-left: -90px;
+    padding-right: 50px;
+    font-size: 42px;
+  }
+}

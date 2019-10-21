@@ -1,0 +1,30 @@
+.progress {
+  position: relative;
+  display: inline-block;
+
+  svg {
+    width: 160px;
+    height: 160px;
+  }
+
+  circle {
+    fill: transparent;
+  }
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+
+  &__progress {
+    stroke-linecap: round;
+
+    &--red {
+      stroke: $orange;
+      width: 5px;
+    }
+  }
+
+  &__path {
+    stroke: $text-grey;
+  }
+}

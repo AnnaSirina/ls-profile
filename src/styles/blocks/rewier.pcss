@@ -1,0 +1,102 @@
+.rewier__container {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+.rewier--section-title {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.rewier__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rewier__prev,
+.rewier__next {
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  text-align: center;
+  margin-right: 20px;
+  transition: 0.3s;
+
+  &:hover {
+    border: 2px solid $fill-grey-hover;
+  }
+}
+
+.rewier__row1 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60%;
+  margin-bottom: 110px;
+}
+
+.rewier__desc {
+  display: flex;
+  justify-content: space-between;
+  max-width: 85%;
+}
+
+.rewier__desc-item {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rewier__topic {
+  color: $text-grey;
+  line-height: 1.5;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.rewier__about {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rewier__name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.rewier__value {
+  color: $text-grey;
+}
+
+.rewier__img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 60px;
+}
+
+.rewier__avatar {
+  display: block;
+  background-image: url(../images/content/dmitriy.jpg);
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.quote-icon {
+  width: 66px;
+  height: 72px;
+  fill: rgba(88, 89, 90, 0.3);
+  margin-right: 20px;
+}

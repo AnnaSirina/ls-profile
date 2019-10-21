@@ -4,5 +4,11 @@
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",
-  "bp-phones": "480px"
+  "bp-phones": "480px",
+  "fill-grey": "#736f6a",
+  "fill-grey-hover": "#25211d",
+  "bc-grey": "#212426",
+  "text-grey": "#94928f",
+  "blue": "#586ed3",
+  "orange": "#d5821e"
 }
