@@ -11,6 +11,11 @@
   @include tablets {
     height: 70vh;
   }
+
+  @include phones {
+    flex-direction: column;
+    height: 90vh;
+  }
 }
 
 .footer__column1 {
@@ -20,6 +25,10 @@
   width: 40%;
   @include tablets {
     justify-content: start;
+  }
+  @include phones {
+    width: 95%;
+    margin-bottom: 45px;
   }
 }
 
@@ -58,6 +67,10 @@
   @include tablets {
     margin-bottom: 20px;
   }
+
+  @include phones {
+    width: 95%;
+  }
 }
 
 .footer__about {
@@ -66,6 +79,10 @@
 
   @include tablets {
     width: 55%;
+  }
+
+  @include phones {
+    width: 95%;
   }
 }
 
@@ -76,6 +93,10 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @include phones {
+    margin-bottom: 50px;
+  }
 }
 
 .footer__text {
@@ -84,6 +105,13 @@
 
   @include tablets {
     margin-bottom: 20px;
+  }
+
+  @include phones {
+    font-size: 14px;
+    margin-bottom: 40px;
+    line-height: 2;
+    max-width: 85%;
   }
 }
 
@@ -99,6 +127,11 @@
 
 .footer__socials {
   width: 40%;
+
+  @include phones {
+    display: flex;
+    width: 70%;
+  }
 }
 
 .footer__social__item {
@@ -115,6 +148,10 @@
   @include tablets {
     margin-bottom: 65px;
   }
+
+  @include phones {
+    margin-bottom: 50px;
+  }
 }
 
 .footer__nav-list {
@@ -127,5 +164,8 @@
   @include tablets {
     width: 15%;
     padding-bottom: 25px;
+  }
+  @include phones {
+    width: 33%;
   }
 }
