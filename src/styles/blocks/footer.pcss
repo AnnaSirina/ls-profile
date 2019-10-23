@@ -30,6 +30,12 @@
     width: 95%;
     margin-bottom: 45px;
   }
+
+  @include desktopHd {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+  }
 }
 
 .footer__desc {
@@ -71,6 +77,11 @@
   @include phones {
     width: 95%;
   }
+
+  @include desktopHd {
+    font-weight: bold;
+    color: white;
+  }
 }
 
 .footer__about {
@@ -83,6 +94,11 @@
 
   @include phones {
     width: 95%;
+  }
+
+  @include desktopHd {
+    width: 55%;
+    line-height: 2;
   }
 }
 
@@ -112,6 +128,10 @@
     margin-bottom: 40px;
     line-height: 2;
     max-width: 85%;
+  }
+
+  @include desktopHd {
+    max-width: 70%;
   }
 }
 
