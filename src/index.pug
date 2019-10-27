@@ -11,6 +11,8 @@ html(lang="en")
     .wrapper
       .intro-section
         section.first
+          +image("content/bg1.png", "first__bg")
+          
           .container.first__container
             header.first__header
               .first__logo
@@ -43,8 +45,9 @@ html(lang="en")
               a.scroll__link
                 .scroll-downbtn Скролл 
                 +icon("scroll", 'scroll__icon')
-        
+        +image("content/2bg2.png", "aboutme__bg")
         section.aboutme
+          
           .container.aboutme__container
             .aboutme__left
               .user
@@ -75,23 +78,7 @@ html(lang="en")
             h2.section-title.profite__section-title Чем я могу быть Вам полезна
             .profite__desc 
               p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво! 
-          ul.skills 
-            -
-              var skills = [
-                ['Front-end', ['HTML5', 'CSS', 'JavaScript','Jquery и Vue.js']],
-                ['Workflow', ['GIT', 'Terminal', 'Gulp', 'Webpack']]
-              ] 
-            each item in skills
-              li.skills__item.skills-row
-                h3.skills-row__title #{item[0]}
-                ul.skills-row__list
-                  each skill in item[1]
-                    li.skills-row__item 
-                      .progress
-                        .progress-circle
-                          svg
-                            circle.progress-circle__path(r='48', cy='80', cx='80', stroke-width="2")
-                            circle.progress-circle__progress.progress-circle__progress--red(r='48', cy='80', cx='80', stroke-dasharray='200 1000', stroke-width="7")
+          #skills-component
                         
       section.works 
         .container.works__container
@@ -132,6 +119,7 @@ html(lang="en")
         +image("content/l4.png", "rewier-form__bkg4")
         
         section.rewier
+          #reviews-component
           .container.rewier__container
             .rewier__row1
               h2.section-title.rewier--section-title Что обо мне говорят
@@ -213,3 +201,6 @@ html(lang="en")
                 .footer__text 
                   p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете.
                   .footer__auther Martin Golding
+
+
+    include ./templates/entry.pug

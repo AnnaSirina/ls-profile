@@ -6,6 +6,7 @@
   "bp-tablets": "768px",
   "bp-phones": "480px",
   "fill-grey": "#736f6a",
+  "about-grey": "#1b1f22",
   "fill-grey-hover": "#25211d",
   "bc-grey": "#212426",
   "text-grey": "#94928f",

@@ -8,6 +8,14 @@
   @include desktopHd {
     height: 100vh;
   }
+
+  @include tablets {
+    height: 90vh;
+  }
+
+  @include phones {
+    height: 100vh;
+  }
 }
 
 .profite__pic {
@@ -17,14 +25,14 @@
 
   @include tablets {
     position: absolute;
-    bottom: -15%;
+    bottom: -17%;
     left: 25%;
     transform: rotate(270deg);
   }
 
   @include phones {
     width: 55%;
-    bottom: -7%;
+    bottom: -10%;
   }
 
   @include desktopHd {
@@ -38,6 +46,10 @@
   align-content: space-between;
   flex-direction: column;
   align-items: center;
+
+  @include tablets {
+    justify-content: flex-start;
+  }
 }
 
 .profite__title {
@@ -50,7 +62,6 @@
   }
 
   @include phones {
-    font-size: 24px;
     max-width: 100%;
     text-align: left;
   }
@@ -69,6 +80,7 @@
   @include phones {
     margin: 0;
     max-width: 70%;
+    font-size: 24px;
   }
 }
 

@@ -1,17 +1,25 @@
 .aboutme {
-  background-image: url(../images/content/about.png);
-  background-position: center center no-repeat;
-  background-size: cover;
   height: 100vh;
+  position: relative;
+  background-color: $about-grey;
 
+  @include tablets {
+    background: transparent;
+    height: 75vh;
+  }
   @include phones {
     height: 90vh;
   }
 }
+
 .aboutme__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
   @include phones {
     flex-direction: column;
@@ -22,6 +30,7 @@
 .aboutme__left {
   margin-right: 160px;
   min-width: 30%;
+  z-index: 5;
 
   @include phones {
     margin-right: 0;
@@ -101,4 +110,8 @@
       width: 28px;
     }
   }
+}
+
+.aboutme__right {
+  z-index: 5;
 }
