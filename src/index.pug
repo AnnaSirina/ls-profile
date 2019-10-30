@@ -31,8 +31,24 @@ html(lang="en")
                     li.socials__item
                       a(href="").social__link
                       +icon(`${item}`, 'socials__icons')
-                button#menu
-                  span.menu-span
+              #app 
+                button.menu(v-on:click='isHidden = !isHidden')
+                  span.menu__span
+                .pop(v-if='isHidden')
+                  button(v-on:click='isHidden = false') 
+                  nav.nav
+                    - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
+                    ul.nav__list
+                      each item in menu
+                        li.nav__item
+                          a(href="").nav__link #{item}
+                  .first__links
+                    - var icons = ['insta', 'vk', 'github']
+                    ul.socials
+                      each item in icons
+                        li.socials__item
+                          a(href="").social__link
+                          +icon(`${item}`, 'socials__icons')
             .first__content
               .first__about
                 h1.first__user-about 
@@ -119,33 +135,8 @@ html(lang="en")
         +image("content/l4.png", "rewier-form__bkg4")
         
         section.rewier
-          #reviews-component
           .container.rewier__container
-            .rewier__row1
-              h2.section-title.rewier--section-title Что обо мне говорят
-              .rewier__btns
-                button.rewier__prev
-                  +icon("arrow-down", 'arrow-prev')
-                button.rewier__next
-                  +icon("arrow-down", 'arrow-next')
-            .rewier__row2
-              ul.rewier__desc
-                - 
-                  var items = [
-                    ['Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей.', 'Ковальчук Дмитрий', 'Основатель Loftschool', 'content/vladimir.jpg'],
-                    ['Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на очень старых браузерах.', 'Владимир Сабанцев', 'Преподаватель', 'content/vladimir.jpg'],
-                   
-                  ]
-                each item in items
-                  +icon('quote', 'quote-icon')
-                  li.rewier__desc-item
-                    .rewier__topic #{item[0]}
-                    .rewier__about
-                      .rewier__img
-                        .rewier__avatar   
-                      .rewier__person
-                        .rewier__name #{item[1]}
-                        .rewier__value #{item[2]}
+            #slider
                       
                       
         section.contact
@@ -192,11 +183,11 @@ html(lang="en")
                   p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool.
                 .footer__links
                   - var icons = ['insta', 'vk', 'github']
-                  ul.socials.footer__socials
+                  ul.footer__socials
                     each item in icons
                       li.socials__item.footer__social__item
                         a(href="").social__link.footer__social__link
-                          +icon(`${item}`, 'socials__icons')
+                        +icon(`${item}`, 'socials__icons')
               .footer__desc-col2
                 .footer__text 
                   p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете.

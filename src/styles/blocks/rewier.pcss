@@ -6,6 +6,7 @@
 }
 
 .rewier__container {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-content: space-between;
@@ -176,4 +177,47 @@
   @include phones {
     display: none;
   }
+}
+
+#slider {
+  width: 60%;
+  overflow: hidden;
+  margin: 0 auto;
+
+  .slider {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  article {
+    width: 100%;
+    padding: 0 15%;
+  }
+
+  .flickity-prev-next-button {
+    bottom: 30px;
+    position: absolute;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    top: 5%;
+    left: 25%;
+  }
+
+  .flickity-prev-next-button.next {
+    top: 5%;
+    left: 28%;
+  }
+}
+
+div.flickity-enabled:focus {
+  outline: none;
 }

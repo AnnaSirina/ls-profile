@@ -1,0 +1,13 @@
+script(type="text/x-template")#rewiers
+    h2.rewier--section-title Что обо мне говорят
+    #slider
+        .slider
+        article.slide(v-for='item in items')
+            a(v-bind:href="''+item.link+''")
+            p.rewier__topic {{item.content}}
+            .rewier__about
+            .rewier__img
+                img.rewier__avatar(:src='item.img' alt='item.title')
+            .rewier__person
+                .rewier__name {{item.name}}
+                .rewier__value {{item.title}}

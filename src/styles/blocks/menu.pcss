@@ -1,13 +1,10 @@
-#menu {
+.menu {
   background: transparent;
   border: transparent;
   outline: none;
-  width: 27px;
+  width: 40px;
   position: relative;
   cursor: pointer;
-  text-align: center;
-  display: none;
-  margin-right: 40px;
   &:hover {
     transform: scale(1.1);
     transition: 1ms;
@@ -23,29 +20,36 @@
   }
 }
 
-.menu-span {
+.menu__span {
   content: "";
-  height: 3px;
-  width: 27px;
+  height: 2px;
+  width: 35px;
   display: block;
-  background: white;
-
+  color: #fff;
+  border: 1px solid #fff;
+  background: #fff;
   &:before {
     content: "";
-    height: 3px;
-    width: 27px;
+    height: 2px;
+    width: 35px;
     display: block;
-    background: white;
-    bottom: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: #fff;
+    bottom: 10px;
+    left: 6px;
     position: absolute;
   }
   &:after {
     content: "";
-    height: 3px;
-    width: 27px;
+    height: 2px;
+    width: 35px;
     display: block;
-    background: white;
+    color: #000;
+    border: 1px solid #fff;
+    background: #fff;
     position: absolute;
-    top: 5px;
+    top: 10px;
+    left: 6px;
   }
 }

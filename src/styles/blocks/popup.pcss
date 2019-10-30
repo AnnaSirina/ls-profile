@@ -1,0 +1,30 @@
+.pop {
+  @include desktop {
+    display: none;
+  }
+
+  @include desktopHd {
+    display: none;
+  }
+  @include phones {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+  }
+}
+
+#app {
+  @include desktop {
+    display: none;
+  }
+
+  @include desktopHd {
+    display: none;
+  }
+
+  @include tablets {
+    display: block;
+  }
+}
