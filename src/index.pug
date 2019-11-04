@@ -31,24 +31,8 @@ html(lang="en")
                     li.socials__item
                       a(href="").social__link
                       +icon(`${item}`, 'socials__icons')
-              #app 
-                button.menu(v-on:click='isHidden = !isHidden')
-                  span.menu__span
-                .pop(v-if='isHidden')
-                  button(v-on:click='isHidden = false') 
-                  nav.nav
-                    - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
-                    ul.nav__list
-                      each item in menu
-                        li.nav__item
-                          a(href="").nav__link #{item}
-                  .first__links
-                    - var icons = ['insta', 'vk', 'github']
-                    ul.socials
-                      each item in icons
-                        li.socials__item
-                          a(href="").social__link
-                          +icon(`${item}`, 'socials__icons')
+              
+
             .first__content
               .first__about
                 h1.first__user-about 
@@ -98,35 +82,9 @@ html(lang="en")
                         
       section.works 
         .container.works__container
-          h2.section-title.works__section-title Мои работы
-          .works__slider
-            .works__left 
-              .slider
-                +image("content/slider.png", "slider__pic")
-                .slider__preview
-                  ul.previews
-                    - for (var i=0; i<3; i++)
-                      li.previes__item
-                        img.previes__img
-                .slider__buttons
-                  .slider-btn
-                    button.slider-btn__item.slider-btn__item--next
-                    button.slider-btn__item.slider-btn__item--prev
-            .works__right
-              .works__tags
-                ul.tags  
-                  - var tags = ['HTML', 'CSS', 'JavaScript']  
-                  each tag in tags          
-                    li.tags__item #{tag}
-                .works__desc
-                  h3.works__title Сайт школы образования
-                  .works__text 
-                    p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                  .works__link
-                    a.icone-link
-                      .icone-link__icon
-                      +icon("link", 'icon-link__icon')
-                      a(href="http://loftschool.ru").icone-link__text Посмотреть сайт
+          .section-title.works__section-title Мои работы
+            .works__content
+              #slider-component
         
       .rewier-form
         +image("content/l1.png", "rewier-form__bkg1")
@@ -136,7 +94,9 @@ html(lang="en")
         
         section.rewier
           .container.rewier__container
-            #slider
+            .contacts__about
+              #reviews-component
+            
                       
                       
         section.contact

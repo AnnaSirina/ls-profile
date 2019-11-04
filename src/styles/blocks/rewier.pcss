@@ -151,7 +151,7 @@
 
 .rewier__avatar {
   display: block;
-  background-image: url(../images/content/dmitriy.jpg);
+
   object-fit: contain;
   background-size: cover;
   background-repeat: no-repeat;
@@ -220,4 +220,123 @@
 
 div.flickity-enabled:focus {
   outline: none;
+}
+
+.reviews__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 95px;
+  padding-top: 250px;
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 33px;
+  }
+}
+
+.reviews__title.section-title {
+  margin-bottom: 0;
+  margin-right: 10%;
+  @include phones {
+    margin-right: 0%;
+    margin-bottom: 25px;
+  }
+}
+
+.reviews__buttons {
+  display: flex;
+}
+
+.reviews__btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  position: relative;
+  border-radius: 50%;
+  margin-right: 30px;
+  outline: none;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:before {
+    content: "";
+    width: 8px;
+    height: 10px;
+    display: block;
+    background: svg-load("arrow-down.svg", fill=$text-color) center center /
+      contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &_prev {
+    &:before {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
+
+.reviews__content {
+  overflow: hidden;
+}
+
+.reviews__content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  will-change: transform;
+  transition: transform 0.3s;
+
+  @include tablets {
+    margin-left: 0;
+  }
+  @include phones {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.reviews__content-item {
+  flex-shrink: 0;
+  padding-right: 30px;
+  width: 50%;
+
+  @include phones {
+    margin-right: 0;
+    width: 100%;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.quote {
+  padding-left: 24%;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    background: svg-load("quote.svg", fill=$text-color) center center / contain
+      no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 37%;
+    opacity: 0.05;
+
+    @include tablets {
+      background: none;
+      padding-left: 0;
+    }
+  }
+}
+
+.quote__text {
+  height: 115px;
+  margin-bottom: 30px;
+  color: rgba($text-color, 0.5);
+  font-weight: 600;
+  line-height: 1.8;
 }

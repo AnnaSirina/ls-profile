@@ -1,0 +1,25 @@
+[{
+        "id": 1,
+        "title": "Old cars",
+        "skills": "Html, Css, JavaScript",
+        "photo": "slider-1.jpg",
+        "link": "//google.com",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex cupiditate animi fugit quod maiores voluptate natus sit consectetur consequuntur a aspernatur, magni rerum delectus nemo, harum dolor et? Alias, nisi."
+    },
+    {
+        "id": 2,
+        "title": "Machinery Parts",
+        "skills": "Html, Css, JavaScript",
+        "photo": "slider-2.jpg",
+        "link": "//yandex.ru",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex cupiditate animi fugit quod maiores voluptate natus sit consectetur consequuntur a aspernatur, magni rerum delectus nemo, harum dolor et? Alias, nisi."
+    },
+    {
+        "id": 3,
+        "title": "Mr. Lovermen, Shabba",
+        "skills": "Html, Css",
+        "photo": "slider-3.jpg",
+        "link": "//rambler.ru",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex cupiditate animi fugit quod maiores voluptate natus sit consectetur consequuntur a aspernatur, magni rerum delectus nemo, harum dolor et? Alias, nisi."
+    }
+]
