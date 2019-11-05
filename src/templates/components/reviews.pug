@@ -1,1 +1,20 @@
-script(type="text/x-template")#reviews
+section.review.container#review
+  h2.title.review__title Что обо мне говорят
+  #review__slider-wrapper
+    review__slider
+
+script(type="text/x-template")#review__slider
+  .review__wrap
+    .review__controls
+      button.review__button.review__button-prev(@click="slide('prev')")
+      button.review__button.review__button-next(@click="slide('next')")
+
+    .review__list
+      flickity(ref="flickity", :options="flickityOptions")
+        .review__item(v-for="item in reviews")
+          blockquote.review__qoute.text {{item.review}}
+          .review__author
+            img.review__image(:src="item.photo", alt="фото автора")
+            .review__info
+              .review__name {{item.author}}
+              .text.review__status.text {{item.status}}
