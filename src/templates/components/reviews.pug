@@ -11,7 +11,7 @@ script(type="text/x-template")#review__slider
 
     .review__list
       flickity(ref="flickity", :options="flickityOptions")
-        .review__item(v-for="item in reviews")
+        .carousel-cell.review__item(v-for="item in reviews")
           blockquote.review__qoute.text {{item.review}}
           .review__author
             img.review__image(:src="item.photo", alt="фото автора")
