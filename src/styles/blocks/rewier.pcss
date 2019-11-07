@@ -1,7 +1,5 @@
-.review {
-  position: relative;
-  padding-top: 145px;
-  padding-bottom: 195px;
+.rewiers {
+  height: 100vh;
 
   @include tablets {
     padding-top: 95px;
@@ -10,16 +8,24 @@
   }
 }
 
-.review__title {
+.rewier__container {
+}
+
+.rewier__title {
   margin-bottom: 90px;
+  color: white;
+  margin-right: 25px;
+}
+
+.rewier__row1 {
+  display: flex;
+  margin-top: 45px;
 }
 
 .review__controls {
-  position: absolute;
-  top: 145px;
-  left: 480px;
-  max-width: 130px;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
 
   @include tablets {
     left: 50%;
@@ -36,6 +42,9 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .review__button:before {
@@ -70,24 +79,22 @@
 .review__button:hover,
 .review__button:hover:before {
   border-color: $text-grey;
+  color: $text-grey;
 }
 
 .review__list {
-  max-width: 977px;
+  max-width: 80%;
 }
 
 .review__item {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  position: relative;
-  max-width: 474px;
-  min-height: 14rem;
-  width: 100%;
+  width: 48%;
   padding-left: 125px;
+  color: white;
+  height: auto;
 
   @include desktop {
-    width: 48%;
     padding-left: 40px;
   }
 
@@ -102,7 +109,7 @@
 .review__item:before {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 25%;
   content: "";
   display: block;
   width: 75px;
@@ -121,21 +128,33 @@
 
 .review__qoute {
   margin-bottom: 25px;
-
   font-weight: 400;
 }
 
+.review__qoute.text {
+  line-height: 2;
+  opacity: 0.7;
+}
 .review__author {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .review__image {
+  display: block;
   margin-right: 30px;
   border-radius: 50%;
   width: 75px;
   height: 75px;
+  background-size: contain;
 }
 
 .review__name {
-  color: $text-color;
+  color: white;
+  font-weight: bold;
   opacity: 1;
+}
+
+.review__status.text {
+  opacity: 0.7;
 }

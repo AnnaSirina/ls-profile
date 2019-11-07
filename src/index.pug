@@ -31,7 +31,9 @@ html(lang="en")
                     li.socials__item
                       a(href="").social__link
                       +icon(`${item}`, 'socials__icons')
-              #app
+              .first__menu-mobile#burger
+                button.menu__burger(@click="showMobileMenu()")
+                  span.first__menu-span
               
 
             .first__content
@@ -87,17 +89,17 @@ html(lang="en")
             .works__content
               #slider-component
         
-      .rewier-form
+      section.rewier-form
         +image("content/l1.png", "rewier-form__bkg1")
         +image("content/l2.png", "rewier-form__bkg2")
         +image("content/l3.png", "rewier-form__bkg3")
         +image("content/l4.png", "rewier-form__bkg4")
         
-        section.rewier
+        .rewier
           .container.rewier__container
             #review__slider
                            
-        section.contact
+        .contact
           .container.contact__container
             h2.section-title.contact--section-title Связаться со мной
             form.contact__form   

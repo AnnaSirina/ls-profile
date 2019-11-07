@@ -5,10 +5,17 @@
   position: relative;
   background-color: $about-grey;
 
-  @include tablets {
+  @include ipadPro {
     background-image: url(../images/content/first-page.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+.first__bg,
+.aboutme__bg {
+  @include ipadPro {
+    display: none;
   }
 }
