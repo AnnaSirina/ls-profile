@@ -1,5 +1,9 @@
 .works {
   height: 100vh;
+
+  @include ipadPro {
+  height: 100%; 
+  }
 }
 
 .works__content {
@@ -11,6 +15,10 @@
 
 .works__container {
   padding-top: 3%;
+
+  @include ipadPro {
+  padding: 100px 0 100px 0;
+  }
   @include phones {
     width: 100%;
   }
