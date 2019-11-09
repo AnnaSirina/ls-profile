@@ -1,8 +1,5 @@
 .contact {
-  height: 100vh;
-  @include desktopHd {
-    height: 50vh;
-  }
+  height: 100%;
 }
 
 .contact__container {
@@ -82,6 +79,9 @@ textarea {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  &:hover {
+    background: $orange-light;
+  }
 }
 
 .contact__btn {

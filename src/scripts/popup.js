@@ -5,7 +5,6 @@ new Vue({
     el: '#burger',
     methods: {
         showMobileMenu() {
-            alert('test');
             const modal = document.querySelector('.popup');
             modal.classList.add('active')
         }
@@ -13,11 +12,11 @@ new Vue({
 });
 
 new Vue({
-    el: '#closeWindow',
+    el: '#close',
     methods: {
         closeWindow() {
-            const modal = document.querySelector('.popup');
-            modal.classList.remove('active')
+            const close = document.querySelector('.popup');
+            close.classList.remove('active')
         }
     }
 });

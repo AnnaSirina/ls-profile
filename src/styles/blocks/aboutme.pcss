@@ -3,6 +3,10 @@
   position: relative;
   background-color: $about-grey;
 
+  @include ipadPro {
+    background: transparent;
+  }
+
   @include tablets {
     background: transparent;
     height: 75vh;
@@ -31,7 +35,10 @@
   margin-right: 160px;
   min-width: 30%;
   z-index: 5;
-
+  @include ipadPro {
+    margin-right: 120px;
+    min-width: 35%;
+  }
   @include phones {
     margin-right: 0;
     min-width: 100%;

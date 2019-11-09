@@ -45,12 +45,12 @@ html(lang="en")
                   span.first__name Анна 
                   span.first__sirname Сирина
             .first__scroll
-              a.scroll__link
+              a(href="#second").scroll__link
                 .scroll-downbtn Скролл 
                 +icon("scroll", 'scroll__icon')
         +image("content/2bg2.png", "aboutme__bg")
-        section.aboutme
-          
+        
+        section.aboutme#second  
           .container.aboutme__container
             .aboutme__left
               .user
@@ -152,20 +152,22 @@ html(lang="en")
                 .footer__text 
                   p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете.
                   .footer__auther Martin Golding
-.popup
-  nav.nav
-    - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
-    ul.nav__list
-      each item in menu
-        li.nav__item
-          a(href="").nav__link #{item}
-    .block__links
-      - var icons = ['insta', 'vk', 'github']
-      ul.socials
-        each item in icons
-          li.socials__item
+    .popup
+      .close#close 
+        button.close(@click="closeWindow()") x
+      nav.nav
+        - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
+        ul.nav__list.nav__list-popup
+          each item in menu
+            li.nav__item.nav__item-popup
+              a(href="").nav__link.nav__link-popup #{item}
+      .block__links
+        - var icons = ['insta', 'vk', 'github']
+        ul.socials.socials-popup
+          each item in icons
+            li.socials__item.socials__items-popup
             a(href="").social__link
-            +icon(`${item}`, 'socials__icons')
+              +icon(`${item}`, 'socials__icons')
 
 
     include ./templates/entry.pug

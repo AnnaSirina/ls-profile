@@ -2,7 +2,7 @@
   height: 100vh;
 
   @include ipadPro {
-  height: 100%; 
+    height: 100%;
   }
 }
 
@@ -17,7 +17,7 @@
   padding-top: 3%;
 
   @include ipadPro {
-  padding: 100px 0 100px 0;
+    padding: 100px 0 100px 0;
   }
   @include phones {
     width: 100%;
@@ -82,7 +82,7 @@
     }
   }
   @include phones {
-    width: 100%;
+    width: 99%;
     margin-bottom: 40px;
     &:before {
       display: none;
@@ -151,9 +151,11 @@
   display: flex;
 
   @include phones {
+    display: flex;
+    flex-direction: column;
     top: initial;
     bottom: 0;
-    top: 70%;
+    top: 47%;
   }
 }
 
@@ -176,6 +178,10 @@
     transform: translate(-50%, -50%) rotate(-90deg);
     transition: opacity 0.3s, margin-top 0.3s;
     opacity: 0.3;
+
+    @include phones {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
   }
   &:hover {
     &:before {
@@ -185,6 +191,10 @@
   &_prev {
     &:before {
       transform: translate(-50%, -50%) rotate(-270deg);
+
+      @include phones {
+        transform: translate(-50%, -50%) rotate(-180deg);
+      }
     }
     &:active {
       &:before {
