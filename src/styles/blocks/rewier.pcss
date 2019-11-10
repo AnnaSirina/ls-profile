@@ -8,7 +8,11 @@
   @include tablets {
     padding-top: 95px;
     padding-bottom: 145px;
-    max-width: 480px;
+    width: 100%;
+  }
+
+  @include phones {
+    padding-bottom: 50px;
   }
 }
 
@@ -20,11 +24,20 @@
   margin-bottom: 90px;
   color: white;
   margin-right: 25px;
+
+  @include phones {
+    min-width: 100%;
+    margin-right: 15%;
+  }
 }
 
 .rewier__row1 {
   display: flex;
   margin-top: 90px;
+
+  @include phones {
+    margin-top: 50px;
+  }
 }
 
 .review__controls {
@@ -35,7 +48,11 @@
   @include tablets {
     left: 50%;
     top: 150px;
-    transform: translateX(-50%);
+  }
+
+  @include phones {
+    transform: translateX(-225%);
+    margin-top: 50px;
   }
 }
 
@@ -91,7 +108,8 @@
   max-width: 80%;
 
   @include tablets {
-    width: 100%;
+    min-width: 100%;
+    min-height: 70%;
   }
 }
 
@@ -117,10 +135,16 @@
   }
 
   @include tablets {
-    width: 100%;
+    width: 50%;
     padding-left: 10px;
     padding-right: 10px;
     flex-shrink: 0;
+    min-height: 65%;
+  }
+
+  @include phones {
+    width: 100%;
+    min-height: 75%;
   }
 }
 
