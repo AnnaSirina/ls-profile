@@ -13,7 +13,6 @@
 }
 
 .rewier__container {
-  height: 100%;
   padding: 100px 0 100px 0;
 }
 
@@ -23,12 +22,9 @@
   margin-right: 25px;
 }
 
-.rewiers {
-  height: 85%;
-}
 .rewier__row1 {
   display: flex;
-  margin-top: 45px;
+  margin-top: 90px;
 }
 
 .review__controls {
@@ -100,12 +96,21 @@
 }
 
 .review__item {
+  min-height: 100%;
   display: flex;
+
   flex-direction: column;
+
+  justify-content: space-between;
+  position: relative;
+  width: 50%;
+  padding-left: 4.6875rem;
+  color: white;
+  /*
   width: 48%;
   padding-left: 125px;
   color: white;
-  height: auto;
+  height: auto;*/
 
   @include desktop {
     padding-left: 40px;
@@ -147,19 +152,27 @@
 .review__qoute.text {
   line-height: 2;
   opacity: 0.7;
+  margin: 0;
+  padding-bottom: 15px;
 }
 .review__author {
   display: flex;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .review__image {
   display: block;
-  margin-right: 30px;
+  max-width: 75px;
+  max-height: 75px;
+  overflow: hidden;
   border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  background-size: contain;
+}
+
+.review__ava {
+  display: block;
+  object-fit: contain;
+  width: 100%;
 }
 
 .review__name {
@@ -170,4 +183,8 @@
 
 .review__status.text {
   opacity: 0.7;
+}
+
+.review__info {
+  padding-left: 15px;
 }

@@ -89,16 +89,12 @@ html(lang="en")
             .works__content
               #slider-component
         
-      section.rewier-form
-        +image("content/l1.png", "rewier-form__bkg1")
-        +image("content/l2.png", "rewier-form__bkg2")
-        +image("content/l3.png", "rewier-form__bkg3")
-        +image("content/l4.png", "rewier-form__bkg4")
-        
+      
+      
+      section.rewier-form                          
         .rewier
           .container.rewier__container
             #review__slider
-                           
         .contact
           .container.contact__container
             h2.section-title.contact--section-title Связаться со мной
@@ -154,7 +150,7 @@ html(lang="en")
                   .footer__auther Martin Golding
     .popup
       .close#close 
-        button.close(@click="closeWindow()") x
+        button.close(@click="closeWindow()") 
       nav.nav
         - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться']
         ul.nav__list.nav__list-popup

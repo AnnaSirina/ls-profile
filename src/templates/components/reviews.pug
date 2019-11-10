@@ -11,7 +11,8 @@ script(type="text/x-template")#rewiers
         .review__item(v-for="item in reviews")
           blockquote.review__qoute.text {{item.review}}
           .review__author
-            img.review__image(:src="item.photo", alt="фото автора")
+            .review__image
+              img.review__ava(:src="item.photo", alt="фото автора")
             .review__info
               .review__name {{item.author}}
               .text.review__status.text {{item.status}}
