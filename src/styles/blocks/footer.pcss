@@ -1,12 +1,17 @@
 .footer {
   background: $bc-grey;
   color: white;
+  height: 100%;
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
-  padding: 80px 0;
+  padding: 80px 0 80px 0;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__column1 {
@@ -14,11 +19,27 @@
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
+  @include tablets {
+    justify-content: start;
+  }
+  @include phones {
+    width: 95%;
+    margin-bottom: 45px;
+  }
+
+  @include desktopHd {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+  }
 }
 
 .footer__desc {
   display: flex;
   justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__desc-col1,
@@ -31,9 +52,13 @@
 .footer__year {
   font-size: 48px;
   color: $text-grey;
+  margin-right: 10px;
   &:before {
     content: "\00A9";
     margin-right: 15px;
+  }
+  @include tablets {
+    margin-bottom: 20px;
   }
 }
 
@@ -41,30 +66,94 @@
   font-size: 18px;
   text-transform: uppercase;
   width: 35%;
+
+  @include tablets {
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    width: 95%;
+  }
+
+  @include desktopHd {
+    font-weight: bold;
+    color: white;
+  }
 }
 
 .footer__about {
   color: $text-grey;
   width: 50%;
+
+  @include tablets {
+    width: 55%;
+  }
+
+  @include phones {
+    width: 95%;
+  }
+
+  @include desktopHd {
+    width: 55%;
+    line-height: 2;
+  }
 }
 
 .footer__menu {
   margin-bottom: 80px;
+
+  @include tablets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include phones {
+    margin-bottom: 50px;
+  }
 }
 
 .footer__text {
   line-height: 1.5;
   color: $text-grey;
+
+  @include tablets {
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    font-size: 14px;
+    margin-bottom: 40px;
+    line-height: 2;
+    max-width: 85%;
+  }
+
+  @include desktopHd {
+    max-width: 70%;
+  }
 }
 
 .footer__auther {
   color: white;
   font-style: italic;
   margin-top: 65px;
+
+  @include tablets {
+    margin-top: 20px;
+  }
 }
 
 .footer__socials {
   width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include phones {
+    display: flex;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .footer__social__item {
@@ -74,5 +163,31 @@
 
   &:hover {
     color: $fill-grey-hover;
+  }
+}
+
+.footer__links {
+  @include tablets {
+    margin-bottom: 65px;
+  }
+
+  @include phones {
+    margin-bottom: 15px;
+  }
+}
+
+.footer__nav-list {
+  @include tablets {
+    flex-wrap: wrap;
+  }
+}
+
+.footer__nav-item {
+  @include tablets {
+    width: 15%;
+    padding-bottom: 25px;
+  }
+  @include phones {
+    width: 33%;
   }
 }

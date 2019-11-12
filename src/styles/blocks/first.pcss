@@ -1,10 +1,19 @@
 .first {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   height: 100vh;
+  position: relative;
 }
 
 .first__container {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .first__header {
@@ -15,6 +24,10 @@
 
 .first__menu {
   margin: 0 20px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .first__header {
@@ -32,4 +45,13 @@
   display: flex;
   justify-content: center;
   padding: 50px 0;
+  @include tablets {
+    display: none;
+  }
+}
+
+.first__links {
+  @include tablets {
+    display: flex;
+  }
 }

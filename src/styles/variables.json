@@ -5,10 +5,14 @@
   "bp-desktop": "1200px",
   "bp-tablets": "768px",
   "bp-phones": "480px",
+  "ipadpro": "1024px",
   "fill-grey": "#736f6a",
+  "about-grey": "#1b1f22",
   "fill-grey-hover": "#25211d",
   "bc-grey": "#212426",
   "text-grey": "#94928f",
   "blue": "#586ed3",
-  "orange": "#d5821e"
+  "orange": "#d5821e",
+  "orange-light": "#dc9322",
+  "grey": "f3f5f9"
 }

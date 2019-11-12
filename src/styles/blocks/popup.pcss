@@ -1,0 +1,124 @@
+.menu__burger {
+  background: transparent;
+  border: transparent;
+  outline: none;
+  width: 40px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: 1ms;
+  }
+}
+
+.first__menu-span {
+  content: "";
+  height: 2px;
+  width: 35px;
+  display: block;
+  color: white;
+  border: 1px solid white;
+  background: white;
+  &:before {
+    content: "";
+    height: 2px;
+    width: 35px;
+    display: block;
+    color: white;
+    border: 1px solid white;
+    background: white;
+    bottom: 10px;
+    left: 6px;
+    position: absolute;
+  }
+  &:after {
+    content: "";
+    height: 2px;
+    width: 35px;
+    display: block;
+    color: white;
+    border: 1px solid white;
+    background: white;
+    position: absolute;
+    top: 10px;
+    left: 6px;
+  }
+}
+
+.popup {
+  display: none;
+  position: relative;
+}
+
+.popup.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include phones {
+    width: 100%;
+  }
+}
+
+.nav__list-popup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: grey;
+}
+
+.nav__item-popup {
+  list-style-type: none;
+  margin-bottom: 40px;
+  font-size: 20px;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.nav__link-popup {
+  text-decoration: none;
+}
+
+.block__links {
+  display: flex;
+  justify-content: center;
+}
+.socials-popup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  &:hover {
+    fill: $fill-grey-hover;
+  }
+}
+
+.socials.socials-popup {
+  @include phones {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.close {
+  background: transparent;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 1%;
+  left: 2%;
+  color: grey;
+}

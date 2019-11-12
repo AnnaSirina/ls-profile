@@ -1,4 +1,4 @@
-.skill__round {
+/*.skill__round {
   max-width: 200px;
   max-height: 200px;
   fill: transparent;
@@ -8,15 +8,124 @@
 }
 .skills-row__list {
   display: flex;
+
+  @include phones {
+    flex-wrap: wrap;
+  }
 }
 
 .skills {
   margin-left: 30%;
   margin-top: 130px;
+  @include tablets {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+  @include phones {
+    margin-bottom: 150px;
+  }
 }
 
 .skills-row__title {
   color: white;
   font-size: 24px;
   font-weight: bold;
+  @include tablets {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.skills__item {
+  @include tablets {
+    margin-bottom: 60px;
+  }
+}
+*/
+.skill {
+  position: relative;
+  width: 166px;
+  height: 166px;
+
+  @include tablets {
+    width: 135px;
+    height: 135px;
+  }
+}
+
+.skill__circle {
+  fill: transparent;
+  &_under {
+    stroke: #eaeaea;
+    stroke-width: 2px;
+  }
+  &_above {
+    stroke-width: 10px;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 100;
+  }
+}
+
+.skill__circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 18px;
+  color: rgba(white, 0.7);
+  padding: 14px;
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.skills-row__title {
+  margin-bottom: 26px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+
+  @include tablets {
+    text-align: center;
+    margin-top: 3%;
+  }
+
+  @include phones {
+    margin-bottom: 16px;
+  }
+}
+
+.skills-row__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4%;
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.skills-row__item {
+  margin-left: 4%;
+
+  @include ipadPro {
+    margin-left: 2%;
+  }
+}
+.skills {
+  width: 95%;
+  margin-left: 50%;
+  z-index: 5;
+
+  @include tablets {
+    margin-left: 0;
+  }
+  @include phones {
+    text-align: center;
+  }
+}
+
+.skills__item {
+  margin-bottom: 30px;
 }

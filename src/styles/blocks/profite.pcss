@@ -2,14 +2,46 @@
   background-image: url(../images/content/profite.jpg);
   background-position: center center no-repeat;
   background-size: cover;
-  height: 100vh;
   position: relative;
+  height: 100%;
+
+  @include desktopHd {
+    height: 100vh;
+  }
+
+  @include tablets {
+    height: 90vh;
+  }
+
+  @include phones {
+    height: 100%;
+  }
 }
 
 .profite__pic {
   position: absolute;
   left: 0;
   bottom: -10%;
+
+  @include tablets {
+    position: absolute;
+    bottom: -17%;
+    left: 25%;
+    transform: rotate(270deg);
+  }
+
+  @include phones {
+    width: 55%;
+    bottom: -10%;
+  }
+
+  @include desktopHd {
+    width: 35%;
+  }
+
+  @include smallphones {
+    bottom: -9%;
+  }
 }
 
 .profite__container {
@@ -18,11 +50,29 @@
   align-content: space-between;
   flex-direction: column;
   align-items: center;
+
+  @include tablets {
+    justify-content: flex-start;
+  }
+
+  @include phones {
+    padding: 100px 0 100px 0;
+  }
 }
 
 .profite__title {
   margin: 0 auto;
   max-width: 50%;
+
+  @include tablets {
+    max-width: 70%;
+    text-align: center;
+  }
+
+  @include phones {
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 .profite__section-title {
@@ -30,10 +80,29 @@
   font-weight: bold;
   margin-bottom: 45px;
   color: white;
+
+  @include tablets {
+    max-width: 55%;
+    margin: 0 auto 45px auto;
+  }
+  @include phones {
+    margin: 0;
+    max-width: 70%;
+    font-size: 24px;
+  }
 }
 
 .profite__desc {
   color: $text-grey;
   line-height: 1.5;
   text-align: left;
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 14px;
+    text-align: left;
+  }
 }

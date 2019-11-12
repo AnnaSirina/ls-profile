@@ -1,8 +1,15 @@
 html {
   @include desktop {
-    font-size: 15px;
+    font-size: 16px;
   }
+  @include desktopHd {
+    font-size: 16px;
+  }
+
   @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
     font-size: 14px;
   }
 }
@@ -38,8 +45,37 @@ body {
   }
 }
 
+.section-title {
+  @include desktop {
+    font-size: 36px;
+  }
+  @include desktopHd {
+    font-size: 36px;
+  }
+
+  @include tablets {
+    font-size: 30px;
+  }
+  @include phones {
+    font-size: 24px;
+  }
+}
 section {
-  height: 100vh;
+  @include desktop {
+    height: 100vh;
+  }
+
+  @include tablets {
+    height: 70vh;
+  }
+
+  @include phones {
+    height: 80vh;
+  }
+
+  @include desktopHd {
+    height: auto;
+  }
 }
 
 .fullscreen-section {

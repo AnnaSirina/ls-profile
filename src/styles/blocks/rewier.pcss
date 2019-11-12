@@ -1,102 +1,214 @@
+.rewier {
+  height: auto;
+
+  @include ipadPro {
+    height: 100%;
+  }
+
+  @include tablets {
+    padding-top: 95px;
+    padding-bottom: 145px;
+    width: 100%;
+  }
+
+  @include phones {
+    padding-bottom: 50px;
+  }
+}
+
 .rewier__container {
-  display: flex;
-  justify-content: center;
-  align-content: space-between;
-  flex-direction: column;
+  padding: 100px 0 100px 0;
 }
 
-.rewier--section-title {
+.rewier__title {
+  margin-bottom: 90px;
   color: white;
-  font-size: 36px;
-  font-weight: bold;
-}
+  margin-right: 25px;
 
-.rewier__btns {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rewier__prev,
-.rewier__next {
-  border-radius: 50%;
-  border: 2px solid white;
-  width: 55px;
-  height: 55px;
-  background: transparent;
-  text-align: center;
-  margin-right: 20px;
-  transition: 0.3s;
-
-  &:hover {
-    border: 2px solid $fill-grey-hover;
+  @include phones {
+    min-width: 100%;
+    margin-right: 15%;
   }
 }
 
 .rewier__row1 {
   display: flex;
-  justify-content: space-between;
-  max-width: 60%;
-  margin-bottom: 110px;
+  margin-top: 90px;
+
+  @include phones {
+    margin-top: 50px;
+  }
 }
 
-.rewier__desc {
+.review__controls {
   display: flex;
   justify-content: space-between;
-  max-width: 85%;
+  margin-top: 0;
+
+  @include tablets {
+    left: 50%;
+    top: 150px;
+  }
+
+  @include phones {
+    transform: translateX(-225%);
+    margin-top: 50px;
+  }
 }
 
-.rewier__desc-item {
-  max-width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.review__button {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+  z-index: 5;
 }
 
-.rewier__topic {
+.review__button:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #fff;
+  border-left: transparent;
+  border-bottom: transparent;
+  transform: rotate(45deg) translate(-50%);
+}
+
+.review__button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.review__button:disabled:before {
+  opacity: 0.3;
+}
+
+.review__button-prev:before {
+  border: 2px solid #fff;
+  border-right: transparent;
+  border-top: transparent;
+}
+
+.review__button:hover,
+.review__button:hover:before {
+  border-color: $text-grey;
   color: $text-grey;
-  line-height: 1.5;
-  font-size: 18px;
-  margin-bottom: 20px;
 }
 
-.rewier__about {
+.review__list {
+  max-width: 80%;
+
+  @include tablets {
+    min-width: 100%;
+    min-height: 70%;
+  }
+}
+
+.review__item {
+  min-height: 100%;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+  position: relative;
+  width: 50%;
+  padding-left: 4.6875rem;
+  color: white;
+  /*
+  width: 48%;
+  padding-left: 125px;
+  color: white;
+  height: auto;*/
+
+  @include desktop {
+    padding-left: 40px;
+  }
+
+  @include tablets {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-shrink: 0;
+    min-height: 65%;
+  }
+
+  @include phones {
+    width: 100%;
+    min-height: 75%;
+  }
+}
+
+.review__item:before {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  content: "";
+  display: block;
+  width: 75px;
+  height: 75px;
+
+  background-image: svg-load("quote.svg", fill=#fff, width=100%, height=100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.05;
+
+  @include desktop {
+    width: 30px;
+    height: 26px;
+  }
+}
+
+.review__qoute {
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.review__qoute.text {
+  line-height: 2;
+  opacity: 0.7;
+  margin: 0;
+  padding-bottom: 15px;
+}
+.review__author {
   display: flex;
   justify-content: flex-start;
+  width: 100%;
 }
 
-.rewier__name {
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.rewier__value {
-  color: $text-grey;
-}
-
-.rewier__img {
+.review__image {
   display: block;
-  width: 80px;
-  height: 80px;
+  max-width: 75px;
+  max-height: 75px;
   overflow: hidden;
   border-radius: 50%;
-  margin-right: 60px;
 }
 
-.rewier__avatar {
+.review__ava {
   display: block;
-  background-image: url(../images/content/dmitriy.jpg);
   object-fit: contain;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
 }
 
-.quote-icon {
-  width: 66px;
-  height: 72px;
-  fill: rgba(88, 89, 90, 0.3);
-  margin-right: 20px;
+.review__name {
+  color: white;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.review__status.text {
+  opacity: 0.7;
+}
+
+.review__info {
+  padding-left: 15px;
 }
